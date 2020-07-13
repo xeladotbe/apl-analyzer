@@ -1,0 +1,20 @@
+name: Sequence
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: data
+      description: Data to bind into this container.
+    - name: firstItem
+      description: A component to include before all others.
+    - name: item(s)
+      description: The component(s) used to lay out the data set.
+    - name: lastItem
+      description: A component to include after all others.
+    - name: numbered
+      description: If true, assign ordinal numbers to children in the data-binding context.
+    - name: onScroll
+      description: Command to execute during scrolling
+    - name: scrollDirection
+      description: The direction to scroll this sequence.

@@ -1,0 +1,22 @@
+name: Container
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: alignItems
+      description: Alignment for children in the cross-axis.
+    - name: data
+      description: Data to bind into this container.
+    - name: direction
+      description: Direction that children will be laid out in.
+    - name: firstItem
+      description: Component to include before all others.
+    - name: item(s)
+      description: Component(s) used to lay out the data set.
+    - name: justifyContent
+      description: How to distribute free space when there is room on the main axis. Defaults to start.
+    - name: lastItem
+      description: Component to include after all others.
+    - name: numbered
+      description: If true, assign ordinal numbers to children. Defaults to false.

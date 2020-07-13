@@ -1,0 +1,15 @@
+name: PlayMedia
+belongsTo: Media Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: audioTrack
+      description: Audio track to play on.
+      values:
+        - value: background
+        - value: foreground
+        - value: none
+    - name: componentId
+      description: Name of the media playing component.
+    - name: source
+      description: Media source

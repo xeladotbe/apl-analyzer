@@ -1,0 +1,24 @@
+name: Frame
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: backgroundColor
+      description: Background color.
+    - name: borderBottomLeftRadius
+      description: Radius of the bottom-left corner. Overrides borderRadius.
+    - name: borderBottomRightRadius
+      description: Radius of the bottom-right corner. Overrides borderRadius.
+    - name: borderColor
+      description: Color of the border.
+    - name: borderRadius
+      description: Corner radius for rounded-rectangle variant.
+    - name: borderTopLeftRadius
+      description: Radius of the top-left corner. Overrides borderRadius if specified.
+    - name: borderTopRightRadius
+      description: Radius of the top-right corner. Overrides borderRadius if specified.
+    - name: borderWidth
+      description: Width of the border.
+    - name: item
+      description: Child component

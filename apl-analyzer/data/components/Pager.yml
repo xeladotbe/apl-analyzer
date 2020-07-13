@@ -1,0 +1,20 @@
+name: Pager
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: data
+      description: Data to bind into this container.
+    - name: firstItem
+      description: A component to include before all others.
+    - name: initialPage
+      description: The index of the starting page (0-based).
+    - name: item(s)
+      description: The Component(s) used to lay out the data set.
+    - name: lastItem
+      description: A component to include after all others.
+    - name: navigation
+      description: Specifies the allowed navigation direction.
+    - name: onPageChanged
+      description: Commands to execute when the page changes.

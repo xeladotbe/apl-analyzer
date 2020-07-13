@@ -1,0 +1,11 @@
+name: Select
+belongsTo: Standard Commands
+minimumVersion: '1.3'
+specification:
+  properties:
+    - name: commands
+      description: An ordered list of commands to select from.
+    - name: data
+      description: A list of data to map against the commands.
+    - name: otherwise
+      description: An array of commands to execute if no command is selected from the commands array.

@@ -1,0 +1,9 @@
+name: OpenURL
+belongsTo: Standard Commands
+minimumVersion: '1.1'
+specification:
+  properties:
+    - name: source
+      description: The URL to open.
+    - name: onFail
+      description: Command to execute if the URL fails to open.

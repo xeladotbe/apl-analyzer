@@ -1,0 +1,30 @@
+name: Viewport
+belongsTo: Initial data-binding context
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: dpi
+      description: Pixel density of the viewport.
+      value: ${viewport.dpi}
+    - name: height
+      description: Height of the viewport in dp.
+      value: ${viewport.height}
+    - name: width
+      description: Width of the viewport in dp.
+      value: ${viewport.width}
+    - name: mode
+      description: The operating mode.
+      value: ${viewport.mode ?? viewport.mode ?? 'unknown'}
+      minimumVersion: '1.1'
+    - name: pixelHeight
+      description: Height of the viewport in pixels.
+      value: ${viewport.pixelHeight}
+    - name: pixelWidth
+      description: Width of the viewport in pixels.
+      value: ${viewport.pixelWidth}
+    - name: shape
+      description: Shape of the viewport.
+      value: ${viewport.shape}
+    - name: theme
+      description: The preferred color scheme
+      value: ${viewport.theme}

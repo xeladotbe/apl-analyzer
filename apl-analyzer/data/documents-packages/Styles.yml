@@ -1,0 +1,24 @@
+name: Styles
+minimumVersion: '1.0'
+belongsTo: Documents and Packages
+specification:
+  sections:
+    - name: Component state
+      specification:
+        properties:
+          - name: checked
+            description: The component has been checked or toggled on
+          - name: disabled
+            description: Component has been disabled (many components have a "disabled" property).
+          - name: focused
+            description: Component has the keyboard input focus
+          - name: karaoke
+            description: The component is being spoken by a speech command
+          - name: karaokeTarget
+            minimumVersion: '1.1'
+            description: An element within the component is the specific target for a current speech command.
+          - name: pressed
+            description: Mouse or touch input is active.
+          - name: hover
+            minimumVersion: '1.2'
+            description: The component has a cursor (mouse pointer) over the active input region.

@@ -1,0 +1,7 @@
+name: SetFocus
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component which will receive focus

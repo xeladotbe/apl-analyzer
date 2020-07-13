@@ -1,0 +1,25 @@
+name: Environment
+belongsTo: Initial data-binding context
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: agentName
+      description: Name of the runtime environment.
+      value: ${environment.agentName}
+    - name: agentVersion
+      description: Version of the runtime environment.
+      value: ${environment.agentVersion}
+    - name: allowOpenURL
+      minimumVersion: '1.1'
+      description: True if the OpenURL command is enabled.
+      expression: ${@APL_VERSION >= '1.1' && environment.allowOpenURL == true}
+    - name: animation
+      description: Animation characteristics of the runtime.
+      value: ${environment.animation ?? environment.animation ?? 'unknown'}
+    - name: aplVersion
+      description: Supported version of APL.
+      value: ${@APL_VERSION}
+    - name: disallowVideo
+      minimumVersion: '1.1'
+      description: True if the Video component is disabled.
+      expression: ${@APL_VERSION >= '1.1' && environment.disallowVideo == true}

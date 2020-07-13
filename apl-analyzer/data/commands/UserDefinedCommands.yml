@@ -1,0 +1,4 @@
+name: User-defined Commands
+position: 0
+minimumVersion: '1.3'
+belongsTo: Commands

@@ -1,0 +1,26 @@
+name: Image
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: align
+      description: Alignment of the image within the containing box.
+    - name: borderRadius
+      description: Clipping radius for the image.
+    - name: filter(s)
+      description: Filters to apply to the image.
+    - name: overlayColor
+      description: If set, a theme-appropriate scrim is overlaid on the image. This ensures text placed on the image is legible.
+    - name: overlayGradient
+      description: A colored gradient that overlays the image.
+    - name: borderTopLeftRadius
+      description: Radius of the top-left corner. Overrides borderRadius if specified.
+    - name: borderTopRightRadius
+      description: Radius of the top-right corner. Overrides borderRadius if specified.
+    - name: borderWidth
+      description: Width of the border.
+    - name: scale
+      description: How the image will be resized to fit in the bounding box.
+    - name: source
+      description: URL to download the image from.

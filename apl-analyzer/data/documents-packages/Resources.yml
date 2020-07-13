@@ -1,0 +1,17 @@
+name: Resources
+minimumVersion: '1.0'
+belongsTo: Documents and Packages
+specification:
+  properties:
+    - name: boolean
+      description: Mapping from boolean name to boolean value.
+    - name: color(s)
+      description: Mapping from color name to color value.
+    - name: description
+      description: Description of this resource block.
+    - name: dimension(s)
+      description: Mapping from dimension name to dimension value.
+    - name: string(s)
+      description: Mapping from a name to a string.
+    - name: when
+      description: If true, this resource block will be included. Defaults to true.

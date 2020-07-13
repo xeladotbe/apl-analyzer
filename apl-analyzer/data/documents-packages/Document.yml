@@ -1,0 +1,40 @@
+name: Document
+minimumVersion: '1.0'
+belongsTo: Documents and Packages
+specification:
+  properties:
+    - name: background
+      minimumVersion: '1.3'
+      description: Override standard background color
+    - name: commands
+      minimumVersion: '1.1'
+      description: Command definitions
+    - name: export
+      minimumVersion: '1.3'
+      description: An optional list of elements intended to be used by an external package or document.
+    - name: graphics
+      minimumVersion: '1.1'
+      description: The graphics property defines a collection of named vector graphics you can use within the document.
+    - name: handleKeyDown
+      minimumVersion: '1.2'
+      description: A list of keyboard event handlers to execute when a key is pressed on the keyboard.
+    - name: handleKeyUp
+      minimumVersion: '1.2'
+      description: A list of keyboard event handlers to execute when a key is released on the keyboard.
+    - name: import
+      description: A list of references to external APL packages.
+    - name: layouts
+      description: Custom layouts.
+    - name: mainTemplate
+      description: The starting layout.
+    - name: onMount
+      description: Command to execute when the document is first displayed.
+    - name: resources
+      description: Resource definitions.
+    - name: settings
+      description: Document-wide settings.
+    - name: styles
+      description: Style definitions.
+    - name: theme
+      minimumVersion: '1.1'
+      description: Document-specified theme

@@ -1,0 +1,10 @@
+name: ScrollView
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: item(s)
+      description: The Component displayed in the ScrollView.
+    - name: onScroll
+      description: Command to execute during scrolling.

@@ -1,0 +1,20 @@
+name: SpeakList
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the Sequence or Container (or any other hosting component).
+    - name: align
+      description: The alignment of the item after scrolling.
+      values:
+        - value: first
+        - value: last
+        - value: center
+        - value: visible
+    - name: count
+      description: The number of children to read.
+    - name: start
+      description: The index of the item to start reading.
+    - name: minimumDwellTime
+      description: The minimum number of milliseconds that an item will be highlighted.

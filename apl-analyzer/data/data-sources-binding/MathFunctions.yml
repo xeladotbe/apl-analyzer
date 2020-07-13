@@ -1,0 +1,39 @@
+name: Math functions
+belongsTo: Initial data-binding context
+minimumVersion: '1.0'
+specification:
+  functions:
+    - name: Math.abs(x)
+      description: The absolute value of x
+    - name: Math.acos(x)
+      description: The arccosine of x
+    - name: Math.asin(x)
+      description: The arcsine of x
+    - name: Math.atan(x)
+      description: The arctangent of x
+    - name: Math.ceil(x)
+      description: The smallest integer greater than or equal to x.
+    - name: Math.clamp(x, y, z)
+      description: Return x if y<x, z if y>z and otherwise y.
+    - name: Math.cos(x)
+      description: The cosine of x
+    - name: Math.floor(x)
+      description: The largest integer less than or equal to x.
+    - name: Math.max(x1, x2, ...)
+      description: The largest argument
+    - name: Math.min(x1, x2, ...)
+      description: The smallest argument
+    - name: Math.PI
+      description: The value of π (PI)
+    - name: Math.random()
+      description: A random number between 0 and 1
+    - name: Math.round(x)
+      description: Return the nearest integer to x
+    - name: Math.sign(x)
+      description: 'The sign of x: -1, 0, or +1'
+    - name: Math.sin(x)
+      description: The sine of x
+    - name: Math.sqrt(x)
+      description: The square root of x
+    - name: Math.tan(x)
+      description: The tangent of x

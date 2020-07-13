@@ -1,0 +1,33 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "एपीएल विश्लेषक",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "DummyIntent",
+                  "slots": [],
+                  "samples": [
+                      "noop"
+                  ]
+              },
+              {
+                  "name": "AMAZON.NavigateHomeIntent",
+                  "samples": []
+              }
+          ],
+          "types": []
+      }
+  }
+}

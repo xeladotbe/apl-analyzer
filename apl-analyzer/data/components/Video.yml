@@ -1,0 +1,25 @@
+name: Video
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: audioTrack
+      description: Audio track to play on.
+    - name: autoplay
+      description: If true, automatically start playing the video.
+    - name: onEnd
+      description: Commands to execute when the last video track is finished playing.
+    - name: onPause
+      description: TCommands to execute when the video switches from playing to paused.
+    - name: onPlay
+      description: Commands to execute when the video switches from paused to playing.
+    - name: onTimeUpdate
+      description: Commands to execute when the playback position changes.
+      minimumVersion: '1.1'
+    - name: onTrackUpdate
+      description: Commands to execute when the current video track changes.
+    - name: scale
+      description: How the video should scale to fill the space.
+    - name: source(s)
+      description: Video source or sources.

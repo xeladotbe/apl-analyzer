@@ -1,0 +1,19 @@
+name: ControlMedia
+belongsTo: Media Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: command
+      description: Command to issue on the media player
+      values:
+        - value: play
+        - value: pause
+        - value: next
+        - value: previous
+        - value: rewind
+        - value: seek
+        - value: setTrack
+    - name: componentId
+      description: Name of the media playing component.
+    - name: value
+      description: Optional data value

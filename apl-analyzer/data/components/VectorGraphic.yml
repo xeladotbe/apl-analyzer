@@ -1,0 +1,14 @@
+name: VectorGraphic
+belongsTo: Components
+minimumVersion: '1.1'
+position: 0
+specification:
+  properties:
+    - name: align
+      description: Alignment of the vector graphic within the component.
+    - name: scale
+      description: How the vector graphic will scale up or down within the component.
+    - name: scale
+      description: How the vector graphic will scale up or down within the component.
+    - name: source
+      description: The URL or direct reference to a vector graphic.

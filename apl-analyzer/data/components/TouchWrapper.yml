@@ -1,0 +1,10 @@
+name: TouchWrapper
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: item
+      description: Child item to display.
+    - name: onPress
+      description: Command to fire when this component is pressed. You can use any commands in the onPress handler.

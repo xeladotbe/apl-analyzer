@@ -1,0 +1,13 @@
+name: Initial data-binding context
+belongsTo: Data Sources and Data Binding
+specification:
+  properties:
+    - name: elapsedTime
+      description: Execution time in milliseconds of this document.
+      minimumVersion: '1.3'
+    - name: localTime
+      description: Local time in milliseconds.
+      minimumVersion: '1.3'
+    - name: utcTime
+      description: UTC time in milliseconds.
+      minimumVersion: '1.3'

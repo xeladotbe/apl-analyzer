@@ -1,0 +1,19 @@
+{
+  "name": "apl-analyzer",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "glob": "^7.1.6",
+    "lodash": "^4.17.15",
+    "sorty": "^1.2.2",
+    "yaml": "^1.10.0"
+  },
+  "dependencies": {
+    "mkdirp": "^1.0.4"
+  }
+}

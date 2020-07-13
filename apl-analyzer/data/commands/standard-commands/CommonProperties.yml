@@ -1,0 +1,14 @@
+name: Common Properties
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: type
+      description: Type of the command
+    - name: description
+      description: Optional documentation for this command
+    - name: delay
+      description: Delay time in milliseconds before this command executes. Must be non-negative.
+    - name: when
+      description: Conditional expression. If this evaluates to false, the command is skipped.

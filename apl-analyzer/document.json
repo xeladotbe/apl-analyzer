@@ -1,0 +1,603 @@
+{
+  "type": "APL",
+  "version": "1.3",
+  "settings": {},
+  "theme": "dark",
+  "import": [
+    {
+      "name": "alexa-styles",
+      "version": "1.0.0"
+    },
+    {
+      "name": "alexa-viewport-profiles",
+      "version": "1.0.0"
+    }
+  ],
+  "resources": [
+    {
+      "string": {
+        "APL_VERSION": "${environment.aplVersion ?? environment.aplVersion ?? '1.0'}"
+      }
+    }
+  ],
+  "styles": {},
+  "onMount": [],
+  "graphics": {
+    "arrowLeft": {
+      "parameters": [
+        {
+          "name": "fillColor",
+          "default": "#ffffff"
+        },
+        {
+          "name": "strokeColor",
+          "default": "transparent"
+        }
+      ],
+      "type": "AVG",
+      "version": "1.0",
+      "height": 129,
+      "width": 129,
+      "items": {
+        "type": "path",
+        "fill": "${fillColor}",
+        "stroke": "${strokeColor}",
+        "strokeWidth": "5",
+        "pathData": "m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"
+      }
+    }
+  },
+  "commands": {},
+  "layouts": {
+    "Group": {
+      "parameters": [
+        "items",
+        "hasPrecedingSibling",
+        "label"
+      ],
+      "item": {
+        "type": "Container",
+        "paddingTop": "${hasPrecedingSibling ? '@spacingLarge' : 0}",
+        "items": [
+          {
+            "when": "${label}",
+            "type": "Text",
+            "text": "${label}",
+            "color": "#00b3e1",
+            "fontSize": "@fontSizeSmall",
+            "fontWeight": "@fontWeightMedium",
+            "textAlign": "${@viewportProfile != @hubRoundSmall ? 'left' : 'center'}"
+          },
+          {
+            "when": "${label}",
+            "type": "Separator"
+          },
+          {
+            "type": "Container",
+            "items": "${items}"
+          }
+        ]
+      }
+    },
+    "Section": {
+      "parameters": [
+        "items",
+        "hasPrecedingSibling",
+        "label"
+      ],
+      "item": {
+        "type": "Container",
+        "paddingTop": "${hasPrecedingSibling ? '@spacingLarge' : 0}",
+        "items": [
+          {
+            "when": "${label}",
+            "type": "Text",
+            "text": "${label}",
+            "color": "#00b3e1",
+            "fontSize": "@fontSizeRegular",
+            "fontWeight": "@fontWeightBold",
+            "textAlign": "${@viewportProfile != @hubRoundSmall ? 'left' : 'center'}"
+          },
+          {
+            "type": "Container",
+            "paddingTop": "@spacingLarge",
+            "items": "${items}"
+          }
+        ]
+      }
+    },
+    "Link": {
+      "parameters": [
+        {
+          "name": "label"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "componentId",
+          "default": "navigation"
+        },
+        {
+          "name": "page",
+          "default": 0
+        },
+        {
+          "name": "minimumVersion"
+        },
+        {
+          "name": "documentation"
+        }
+      ],
+      "item": {
+        "type": "TouchWrapper",
+        "id": "${id}TouchWrapper",
+        "onPress": [
+          {
+            "type": "SetPage",
+            "componentId": "${componentId}",
+            "value": "${page}"
+          }
+        ],
+        "item": {
+          "type": "Container",
+          "items": [
+            {
+              "type": "Container",
+              "width": "100%",
+              "paddingRight": "${@viewportProfile != @hubRoundSmall ? 0 : @spacingXXLarge}",
+              "paddingLeft": "${@viewportProfile != @hubRoundSmall ? 0 : @spacingXXLarge}",
+              "direction": "row",
+              "alignItems": "center",
+              "items": [
+                {
+                  "type": "Container",
+                  "grow": 0,
+                  "shrink": 1,
+                  "width": "100%",
+                  "items": [
+                    {
+                      "type": "Text",
+                      "text": "${label}",
+                      "fontSize": "@fontSizeRegular"
+                    },
+                    {
+                      "when": "${description}",
+                      "type": "Text",
+                      "text": "${description}",
+                      "fontWeight": "@fontWeightLight",
+                      "fontSize": "${@fontSizeXXSmall}"
+                    }
+                  ]
+                },
+                {
+                  "type": "VectorGraphic",
+                  "source": "arrowLeft",
+                  "height": "30dp",
+                  "width": "30dp",
+                  "scale": "best-fit",
+                  "transform": [
+                    {
+                      "rotate": "180"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "DocumentationLink",
+              "documentation": "${documentation}"
+            },
+            {
+              "type": "Unavailable",
+              "minimumVersion": "${minimumVersion}"
+            }
+          ]
+        }
+      }
+    },
+    "DocumentationLink": {
+      "parameters": [
+        "documentation"
+      ],
+      "item": {
+        "when": "${documentation != undefined && environment.allowOpenURL == true}",
+        "type": "TouchWrapper",
+        "paddingTop": "@spacingSmall",
+        "onPress": [
+          {
+            "type": "OpenURL",
+            "source": "${documentation}"
+          }
+        ],
+        "item": {
+          "type": "Text",
+          "color": "#00b3e1",
+          "fontSize": "@fontSizeXXSmall",
+          "text": "<u>Official documentation</u>"
+        }
+      }
+    },
+    "Option": {
+      "parameters": [
+        {
+          "name": "label"
+        },
+        {
+          "name": "description"
+        },
+        {
+          "name": "documentation"
+        },
+        {
+          "name": "minimumVersion"
+        },
+        {
+          "name": "isAvailable"
+        },
+        {
+          "name": "value"
+        },
+        {
+          "name": "values"
+        }
+      ],
+      "item": {
+        "type": "Container",
+        "width": "100%",
+        "paddingRight": "${@viewportProfile != @hubRoundSmall ? 0 : @spacingXXLarge}",
+        "paddingLeft": "${@viewportProfile != @hubRoundSmall ? 0 : @spacingXXLarge}",
+        "items": [
+          {
+            "type": "Container",
+            "direction": "row",
+            "items": [
+              {
+                "type": "Container",
+                "grow": 0,
+                "shrink": 1,
+                "width": "100%",
+                "items": [
+                  {
+                    "type": "Text",
+                    "text": "${label}",
+                    "fontSize": "@fontSizeRegular"
+                  },
+                  {
+                    "when": "${description}",
+                    "type": "Text",
+                    "maxWidth": "85%",
+                    "text": "${description}",
+                    "lineHeight": "@lineHeightNormal",
+                    "fontWeight": "@fontWeightLight",
+                    "fontSize": "${@fontSizeXXSmall}"
+                  }
+                ]
+              },
+              {
+                "when": "${isAvailable != undefined}",
+                "type": "Container",
+                "alignItems": "center",
+                "justifyContent": "center",
+                "height": "100%",
+                "items": [
+                  {
+                    "type": "Pager",
+                    "height": "32dp",
+                    "width": "70dp",
+                    "navigation": "none",
+                    "initialPage": "${isAvailable == true ? 1 : 0}",
+                    "items": [
+                      {
+                        "type": "Frame",
+                        "borderWidth": 2,
+                        "borderRadius": "20dp",
+                        "borderColor": "#ffffff",
+                        "height": "100%",
+                        "width": "100%",
+                        "item": {
+                          "type": "Container",
+                          "width": "100%",
+                          "height": "100%",
+                          "alignItems": "start",
+                          "justifyContent": "center",
+                          "paddingTop": "2dp",
+                          "paddingRight": "2dp",
+                          "paddingBottom": "2dp",
+                          "paddingLeft": "5dp",
+                          "items": [
+                            {
+                              "type": "Frame",
+                              "borderRadius": "18dp",
+                              "width": "18dp",
+                              "height": "18dp",
+                              "backgroundColor": "#ffffff"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "type": "Frame",
+                        "borderWidth": 2,
+                        "borderRadius": "20dp",
+                        "borderColor": "#00b3e1",
+                        "height": "100%",
+                        "width": "100%",
+                        "item": {
+                          "type": "Container",
+                          "width": "100%",
+                          "height": "100%",
+                          "alignItems": "end",
+                          "justifyContent": "center",
+                          "paddingTop": "2dp",
+                          "paddingRight": "5dp",
+                          "paddingBottom": "2dp",
+                          "paddingLeft": "2dp",
+                          "items": [
+                            {
+                              "type": "Frame",
+                              "borderRadius": "18dp",
+                              "width": "18dp",
+                              "height": "18dp",
+                              "backgroundColor": "#00b3e1"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "when": "${value != undefined}",
+                "type": "Container",
+                "alignItems": "center",
+                "justifyContent": "center",
+                "height": "100%",
+                "items": [
+                  {
+                    "type": "Text",
+                    "fontSize": "@fontSizeRegular",
+                    "text": "${value}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "when": "${values != undefined && @APL_VERSION >= minimumVersion}",
+            "type": "Container",
+            "paddingTop": "@spacingLarge",
+            "items": [
+              {
+                "type": "Text",
+                "fontWeight": "@fontWeightMedium",
+                "fontSize": "@fontSizeXXSmall",
+                "paddingBottom": "@spacingXXSmall",
+                "text": "Possible values:"
+              },
+              {
+                "type": "Container",
+                "data": "${values}",
+                "items": [
+                  {
+                    "when": "${@APL_VERSION >= data.minimumVersion}",
+                    "type": "Text",
+                    "color": "#00b3e1",
+                    "text": "${data.value}",
+                    "paddingLeft": "@spacingMedium",
+                    "lineHeight": "@lineHeightNormal",
+                    "fontWeight": "@fontWeightLight",
+                    "fontSize": "${@fontSizeXXSmall}"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "DocumentationLink",
+            "documentation": "${documentation}"
+          },
+          {
+            "type": "Unavailable",
+            "minimumVersion": "${minimumVersion}"
+          }
+        ]
+      }
+    },
+    "Unavailable": {
+      "parameters": [
+        "minimumVersion"
+      ],
+      "items": [
+        {
+          "when": "${minimumVersion != undefined && @APL_VERSION < minimumVersion}",
+          "type": "Text",
+          "fontSize": "@fontSizeXSmall",
+          "color": "#E50000",
+          "text": "This feature requires at least version: ${minimumVersion}"
+        }
+      ]
+    },
+    "Separator": {
+      "item": {
+        "type": "Container",
+        "items": [
+          {
+            "type": "Frame",
+            "backgroundColor": "#222",
+            "height": "1dp",
+            "width": "100%"
+          }
+        ],
+        "paddingTop": "@spacingSmall",
+        "paddingBottom": "@spacingSmall"
+      }
+    },
+    "Headline": {
+      "parameters": [
+        "componentId",
+        "value"
+      ],
+      "item": {
+        "type": "Container",
+        "paddingRight": "${@viewportProfile == @hubRoundSmall ? @spacingXLarge : 0}",
+        "paddingLeft": "${@viewportProfile == @hubRoundSmall ? @spacingXLarge : 0}",
+        "paddingBottom": "${@viewportProfile == @hubRoundSmall ? @spacingXLarge : 0}",
+        "alignItems": "${@viewportProfile == @hubRoundSmall ? 'center': 'start'}",
+        "justifyContent": "${@viewportProfile == @hubRoundSmall ? 'center': 'start'}",
+        "width": "100%",
+        "items": [
+          {
+            "when": "${componentId != undefined}",
+            "type": "TouchWrapper",
+            "width": "100%",
+            "paddingTop": "${@viewportProfile == @hubRoundSmall ? @spacingXXXLarge : @spacingLarge}",
+            "onPress": [
+              {
+                "type": "SetPage",
+                "componentId": "${componentId}",
+                "value": 0
+              }
+            ],
+            "item": {
+              "type": "Container",
+              "inheritParentState": true,
+              "direction": "row",
+              "alignItems": "center",
+              "justifyContent": "${@viewportProfile == @hubRoundSmall ? 'center': 'start'}",
+              "items": [
+                {
+                  "type": "Container",
+                  "width": "${@viewportProfile == @hubRoundSmall ? '30dp' : @spacingXXLarge}",
+                  "paddingRight": "${@viewportProfile == @hubRoundSmall ? @spacingLarge : 0}",
+                  "justifyContent": "center",
+                  "inheritParentState": true,
+                  "alignItems": "center",
+                  "items": [
+                    {
+                      "inheritParentState": true,
+                      "type": "VectorGraphic",
+                      "source": "arrowLeft",
+                      "height": "30dp",
+                      "width": "30dp",
+                      "scale": "best-fit"
+                    }
+                  ]
+                },
+                {
+                  "type": "Text",
+                  "inheritParentState": true,
+                  "color": "#00b3e1",
+                  "text": "${value}",
+                  "fontWeight": "${@viewportProfile == @hubRoundSmall ? @fontWeightLight : @fontWeightBold}",
+                  "lineHeight": "@lineHeightCondensed",
+                  "fontSize": "${@viewportProfile == @hubRoundSmall ? @fontSizeSmall : @fontSizeXSmall}"
+                }
+              ]
+            }
+          },
+          {
+            "when": "${componentId == undefined}",
+            "type": "Container",
+            "paddingTop": "${@viewportProfile == @hubRoundSmall ? @spacingXXXLarge : @spacingLarge}",
+            "inheritParentState": true,
+            "direction": "row",
+            "alignItems": "center",
+            "justifyContent": "${@viewportProfile == @hubRoundSmall ? 'center': 'start'}",
+            "items": [
+              {
+                "type": "Container",
+                "width": "${@viewportProfile == @hubRoundSmall ? '30dp' : @spacingXXLarge}",
+                "paddingRight": "${@viewportProfile == @hubRoundSmall ? @spacingLarge : 0}",
+                "justifyContent": "center",
+                "inheritParentState": true,
+                "alignItems": "center",
+                "items": [
+                  {
+                    "inheritParentState": true,
+                    "type": "Frame",
+                    "height": "30dp",
+                    "width": "30dp"
+                  }
+                ]
+              },
+              {
+                "type": "Text",
+                "color": "#00b3e1",
+                "inheritParentState": true,
+                "text": "${value}",
+                "fontWeight": "${@viewportProfile == @hubRoundSmall ? @fontWeightLight : @fontWeightBold}",
+                "lineHeight": "@lineHeightCondensed",
+                "fontSize": "${@viewportProfile == @hubRoundSmall ? @fontSizeSmall : @fontSizeXSmall}"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Layout": {
+      "parameters": [
+        "headline",
+        "componentId",
+        "items"
+      ],
+      "item": {
+        "type": "Frame",
+        "backgroundColor": "#151515",
+        "width": "100vw",
+        "height": "100vh",
+        "item": {
+          "type": "Container",
+          "width": "100%",
+          "height": "100%",
+          "items": [
+            {
+              "when": "${@viewportProfile != @hubRoundSmall && headline}",
+              "type": "Headline",
+              "value": "${headline}",
+              "componentId": "${componentId}"
+            },
+            {
+              "type": "Container",
+              "grow": 0,
+              "shrink": 1,
+              "height": "100%",
+              "width": "100%",
+              "items": [
+                {
+                  "type": "ScrollView",
+                  "width": "100%",
+                  "height": "100%",
+                  "paddingBottom": "${@viewportProfile != @hubRoundSmall ? 0 : (@spacingXXXLarge + @spacingLarge)}",
+                  "item": {
+                    "type": "Container",
+                    "width": "100%",
+                    "paddingTop": "${@viewportProfile == @hubRoundSmall ? 0 : @spacingXXLarge}",
+                    "paddingRight": "${@viewportProfile == @hubRoundSmall ? 0 : @spacingXXLarge}",
+                    "paddingBottom": "${@viewportProfile == @hubRoundSmall ? 0 : @spacingXXLarge}",
+                    "paddingLeft": "${@viewportProfile == @hubRoundSmall ? 0 : @spacingXXLarge}",
+                    "items": [
+                      {
+                        "when": "${@viewportProfile == @hubRoundSmall && headline}",
+                        "type": "Headline",
+                        "value": "${headline}",
+                        "componentId": "${componentId}"
+                      },
+                      "${items}"
+                    ]
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "Analyzer": {
+      "item": {
+        "description": "This part is generated dynamically. To generate, execute: npm run build"
+      }
+    }
+  }
+}

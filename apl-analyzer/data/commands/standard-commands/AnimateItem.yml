@@ -1,0 +1,20 @@
+name: AnimateItem
+belongsTo: Standard Commands
+minimumVersion: '1.1'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component.
+    - name: duration
+      description: The duration of the animation (in milliseconds)
+    - name: easing
+      description: Specify an easing curve.
+    - name: repeatCount
+      description: Number of times to repeat.
+    - name: repeatMode
+      description: How repeated animations will play.
+      values:
+        - value: restart
+        - value: reverse
+    - name: value
+      description: An array of animated component properties.

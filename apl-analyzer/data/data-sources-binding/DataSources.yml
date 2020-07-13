@@ -1,0 +1,34 @@
+name: Data Sources
+belongsTo: Data Sources and Data Binding
+minimumVersion: '1.0'
+specification:
+  sections:
+    - name: object data source
+      specification:
+        properties:
+          - name: type
+            description: Must be "object".
+          - name: properties
+            description: An object containing bindable properties that can be used with transformers.
+          - name: objectID
+            description: An optional identifier for an object data source.
+          - name: description
+            description: Optional description of the data source.
+          - name: transformers
+            description: An array of transformers that are applied to values in the properties object.
+    - name: dynamicIndexList data source
+      minimumVersion: '1.3'
+      specification:
+        properties:
+          - name: type
+            description: '"dynamicIndexList".'
+          - name: listId
+            description: Identifier to distinguish between different datasources in the same APL document.
+          - name: startIndex
+            description: Index of the leading item in the items array. Specify a non-zero value to start the experience at an arbitrary offset.
+          - name: minimumInclusiveIndex
+            description: The index of the first item in the array, inclusive.
+          - name: maximumExclusiveIndex
+            description: The last index of the array, exclusive.
+          - name: items
+            description: Array of object data of the first items to render (with the leading element indexed at startIndex). Alexa displays the leading item at the top/left of the visible list area.

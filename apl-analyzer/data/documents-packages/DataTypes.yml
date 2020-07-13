@@ -1,0 +1,68 @@
+name: Data Types
+minimumVersion: '1.0'
+belongsTo: Documents and Packages
+specification:
+  sections:
+    - name: Dimension
+      specification:
+        properties:
+          - name: Absolute dimensions
+            description: Absolute dimensions are integers interpreted as display-independent pixels.
+          - name: Relative dimensions
+            description: Relative dimensions are represented by a string of the form "X%", where X is a valid JSON number.
+          - name: Special dimensions
+            description: Special dimensions are named values that have special processing.
+    - name: Color
+      specification:
+        properties:
+          - name: Standard colors
+            description: A standard color is a named reference from the HTML standard.
+          - name: Hexadecimal color
+            description: 'A color may be defined as a #-prefixed hexadecimal string.'
+          - name: RGB / RGBA function
+            description: A color may be defined as an rgb() or rgba() function (the second is an alias for the first).
+          - name: HSL / HSLA function
+            description: A color may be defined as an hsl() or hsla() function (the second is an alias for the first).
+          - name: Transparent
+            description: A color may be defined as the keyword "transparent".
+    - name: Gradient
+      specification:
+        properties:
+          - name: angle
+            description: Angle of a linear gradient, in degrees. 0 is up, 90 is to the right.
+          - name: colorRange
+            description: The color to assign at each gradient stop.
+          - name: description
+            description: Optional description of this gradient.
+          - name: inputRange
+            description: The input stops of the gradient. Must be in ascending order with values between 0 and 1.
+          - name: type
+            description: The type of the gradient.
+            values:
+              - value: linear
+              - value: radial
+    - name: Filter
+      specification:
+        groups:
+          - name: Blur
+            specification:
+              properties: 
+                - name: type
+                  description: Defines the type of filter
+                - name: radius
+                  description: Radius of the blur effect
+          - name: Noise
+            minimumVersion: '1.2'
+            specification:
+              properties:
+                - name: type
+                  description: Defines the type of filter
+                - name: kind
+                  description: The probability distribution used to generate the noise.
+                  values:
+                    - value: uniform
+                    - value: gaussian
+                - name: useColor
+                  description: If true, colored noise will be used. If false, monochromatic.
+                - name: sigma
+                  description: Standard deviation of the noise.

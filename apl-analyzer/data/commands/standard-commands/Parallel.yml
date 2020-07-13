@@ -1,0 +1,7 @@
+name: Parallel
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: commands
+      description: An unordered list of command to execute in parallel.

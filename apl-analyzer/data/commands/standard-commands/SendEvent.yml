@@ -1,0 +1,9 @@
+name: SendEvent
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: arguments
+      description: An array of argument data to pass to Alexa.
+    - name: commands
+      description: An array of components to extract value data from and provide to Alexa.

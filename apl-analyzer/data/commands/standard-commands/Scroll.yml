@@ -1,0 +1,9 @@
+name: Scroll
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component.
+    - name: distance
+      description: The number of pages to scroll.

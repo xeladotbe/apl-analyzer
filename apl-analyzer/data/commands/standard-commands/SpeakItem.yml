@@ -1,0 +1,22 @@
+name: SpeakItem
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component.
+    - name: align
+      description: The alignment of the item after scrolling.
+      values:
+        - value: first
+        - value: last
+        - value: center
+        - value: visible
+    - name: highlightMode
+      description: 'How karaoke is applied: on a line-by-line basis, or to the entire block.'
+      values:
+        - value: line
+        - value: block
+    - name: minimumDwellTime
+      minimumVersion: '1.1'
+      description: The minimum number of milliseconds that an item will be highlighted.

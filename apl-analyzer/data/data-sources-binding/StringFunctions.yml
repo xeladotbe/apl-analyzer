@@ -1,0 +1,11 @@
+name: String functions
+belongsTo: Initial data-binding context
+minimumVersion: '1.0'
+specification:
+  functions:
+    - name: String.slice(x, y[, z])
+      description: Return the subset of x starting at index y and extending to but not including index z. If z is omitted, the remainder of the string is returned. If y is a negative number, select from the end of the string.
+    - name: String.toLowerCase(x)
+      description: Lowercase the string
+    - name: String.toUpperCase(x)
+      description: Uppercase the string

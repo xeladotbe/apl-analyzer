@@ -1,0 +1,4 @@
+name: Finish
+belongsTo: Standard Commands
+minimumVersion: '1.3'
+description: Closes the current APL document and exits.

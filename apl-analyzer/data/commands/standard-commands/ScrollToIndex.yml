@@ -1,0 +1,16 @@
+name: ScrollToIndex
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component.
+    - name: index
+      description: The 0-based index of the child to display.
+    - name: align
+      description: The alignment of the item after scrolling.
+      values:
+        - value: first
+        - value: last
+        - value: center
+        - value: visisble

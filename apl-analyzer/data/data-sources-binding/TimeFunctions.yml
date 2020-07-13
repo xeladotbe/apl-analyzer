@@ -1,0 +1,23 @@
+name: Time functions
+belongsTo: Initial data-binding context
+minimumVersion: '1.3'
+specification:
+  functions:
+    - name: Time.year(x)
+      description: The year
+    - name: Time.month(x)
+      description: The month (from 0-11)	
+    - name: Time.date(x)
+      description: The date of the month (1-31)
+    - name: Time.weekDay(x)
+      description: The day of the week (0-6)
+    - name: Time.hours(x)
+      description: The hour of the day (0-23)
+    - name: Time.minutes(x)
+      description: The minutes of the hour (0-59)
+    - name: Time.seconds(x)
+      description: The seconds in the minute (0-59)
+    - name: Time.milliseconds(x)
+      description: The milliseconds (0-999)
+    - name: Time.format(f, x)
+      description: A formatted text string

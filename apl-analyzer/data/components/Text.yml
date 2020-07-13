@@ -1,0 +1,28 @@
+name: Text
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: color
+      description: The color of the text.
+    - name: fontFamily
+      description: Font family (such as \"Amazon Ember Display\").
+    - name: fontSize
+      description: The size of the text.
+    - name: fontStyle
+      description: The font style to display.
+    - name: fontWeight
+      description: The font weight to display.
+    - name: letterSpacing
+      description: Additional space to add between letters.
+    - name: lineHeight
+      description: Line-height multiplier.
+    - name: maxLines
+      description: The maximum number of lines of text to display. The text will be truncated with an ellipsis if not all text is visible.
+    - name: text
+      description: The markup to display in this text box. If this value is set to null or an empty string "", no content appears.
+    - name: textAlign
+      description: Alignment of text within a paragraph.
+    - name: textAlignVertical
+      description: Vertical alignment of text.

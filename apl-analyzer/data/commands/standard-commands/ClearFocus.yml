@@ -1,0 +1,4 @@
+name: ClearFocus
+belongsTo: Standard Commands
+minimumVersion: '1.1'
+description: Removes focus from the actionable component that is currently in focus.

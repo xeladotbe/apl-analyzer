@@ -1,0 +1,23 @@
+name: Layouts
+minimumVersion: '1.0'
+belongsTo: Documents and Packages
+specification:
+  properties:
+    - name: item
+      description: The component to inflate. If an array is passed, the first item with a matching when clause will be inflated.
+    - name: parameters
+      description: An array of parameters that can be passed to this layout.
+    - name: description
+      description: A description of this layout
+  sections:
+    - name: parameters
+      specification:
+        properties:
+          - name: default
+            description: The default value to apply if this parameter is not specified. Defaults to empty.
+          - name: description
+            description: A user-provided description of the purpose of this parameter.
+          - name: name
+            description: The parameter name.
+          - name: type
+            description: The type of the parameter. Defaults to "any".

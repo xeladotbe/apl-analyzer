@@ -1,0 +1,11 @@
+name: SetValue
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component whose value should be set.
+    - name: property
+      description: The name of the property to set.
+    - name: value
+      description: The value to set on the property.

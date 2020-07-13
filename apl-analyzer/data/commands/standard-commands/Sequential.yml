@@ -1,0 +1,15 @@
+name: Sequential
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: commands
+      description: An ordered list of command to execute in series.
+    - name: repeatCount
+      description: The number of times to repeat this series of commands.
+    - name: catch
+      minimumVersion: '1.1'
+      description: An ordered list of commands to execute if this sequence is prematurely terminated.
+    - name: finally
+      minimumVersion: '1.1'
+      description: An ordered list of commands to execute after the normal commands and the catch commands.

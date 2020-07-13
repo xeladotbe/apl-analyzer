@@ -1,0 +1,11 @@
+name: AutoPage
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: componentId
+      description: The id of the component.
+    - name: count
+      description: The number of pages to display. Defaults to all of them.
+    - name: duration
+      description: Time to wait between pages (in milliseconds).

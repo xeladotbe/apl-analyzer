@@ -1,0 +1,259 @@
+{
+    "manifest": {
+        "publishingInformation": {
+            "locales": {
+                "en-US": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa open APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "en-GB": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa open APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "en-CA": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa open APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "en-IN": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa open APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "en-AU": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa open APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "es-ES": {
+                    "name": "Analizador de APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa abre Analizador de APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "es-MX": {
+                    "name": "Analizador de APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa abre Analizador de APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "es-US": {
+                    "name": "Analizador de APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa abre Analizador de APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "fr-FR": {
+                    "name": "Analyseur APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa ouvre Analyseur APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "fr-CA": {
+                    "name": "Analyseur APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa ouvre Analyseur APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "ja-JP": {
+                    "name": "エーピーエルアナライザ",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "アレクサ、エーピーエルアナライザを開いて"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "de-DE": {
+                    "name": "APL Analyzer",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa öffne APL Analyzer"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "it-IT": {
+                    "name": "Analizzatore APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa apri Analizzatore APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "hi-IN": {
+                    "name": "एपीएल विश्लेषक",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa मज़ेदार एपीएल विश्लेषक"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                },
+                "pt-BR": {
+                    "name": "Analisador APL",
+                    "summary": "APL Analyzer",
+                    "description": "APL Analyzer",
+                    "examplePhrases": [
+                        "Alexa abra Analisador APL"
+                    ],
+                    "keywords": [],
+                    "smallIconUri": "https://www.alexandermartin.dev/apl-analyzer/smallIcon.png",
+                    "largeIconUri": "https://www.alexandermartin.dev/apl-analyzer/largeIcon.png"
+                }
+            },
+            "isAvailableWorldwide": true,
+            "testingInstructions": "None.",
+            "category": "KNOWLEDGE_AND_TRIVIA",
+            "distributionCountries": []
+        },
+        "apis": {
+            "custom": {
+                "endpoint": {
+                    "sourceDir": "lambda"
+                },
+                "interfaces": [
+                    {
+                        "type": "ALEXA_PRESENTATION_APL"
+                    }
+                ]
+            }
+        },
+        "manifestVersion": "1.0",
+        "privacyAndCompliance": {
+            "allowsPurchases": false,
+            "locales": {
+                "en-US": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "en-GB": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "en-CA": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "en-IN": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "en-AU": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "es-ES": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "es-MX": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "es-US": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "fr-FR": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "fr-CA": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "ja-JP": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "de-DE": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "it-IT": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "hi-IN": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                },
+                "pt-BR": {
+                    "termsOfUseUrl": "",
+                    "privacyPolicyUrl": ""
+                }
+            },
+            "isExportCompliant": true,
+            "containsAds": false,
+            "isChildDirected": false,
+            "usesPersonalInfo": false
+        }
+    }
+}

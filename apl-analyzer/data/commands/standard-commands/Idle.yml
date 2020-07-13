@@ -1,0 +1,7 @@
+name: Idle
+belongsTo: Standard Commands
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: delay
+      description: Delay time in milliseconds before this command executes.

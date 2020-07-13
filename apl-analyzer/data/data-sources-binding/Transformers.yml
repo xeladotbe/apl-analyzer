@@ -1,0 +1,24 @@
+name: Transformers
+belongsTo: Data Sources and Data Binding
+minimumVersion: '1.0'
+specification:
+  properties:
+    - name: ssmlToSpeech transformer
+      description: The ssmlToSpeech transformer converts an SSML string into a speakable entity.
+    - name: ssmlToText transformer
+      description: The SSML to text transformer converts a full SSML text string into text that is more appropriate for human reading by removing the SSML markup.
+    - name: textToHint transformer
+      description: The textToHint transformer converts the input to a hint with the correct user-configured wake word for the device (Try "Alexa, This is the hint").
+    - name: textToSpeech transformer
+      minimumVersion: '1.1'
+      description: The textToSpeech transformer converts a plain text string into a speakable entity.
+  sections:
+    - name: Transformer properties
+      specification:
+        properties:
+          - name: transformer
+            description: 	The name of the transformer.
+          - name: inputPath
+            description: Path within the object to the part to be transformed.
+          - name: outputName
+            description: Name of the property to be added to the object.

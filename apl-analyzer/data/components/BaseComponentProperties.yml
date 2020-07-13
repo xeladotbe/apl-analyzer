@@ -1,0 +1,82 @@
+name: Base Component Properties
+belongsTo: Components
+minimumVersion: '1.0'
+position: 0
+specification:
+  properties:
+    - name: accessibilityLabel
+      description: Voice-over will read this string when the user selects this component
+      minimumVersion: '1.1'
+    - name: bind
+      description: Expressions to add to the data binding context
+    - name: description
+      description: Optional description of this component
+    - name: checked
+      description: If true, this component has the checked state set.
+      minimumVersion: '1.1'
+    - name: disabled
+      description: If true, this component does not respond to touch or focus.
+      minimumVersion: '1.1'
+    - name: display
+      description: Determines whether the component is displayed on the screen.
+      minimumVersion: '1.1'
+    - name: entity
+      description: Opaque data used to clarify references in Alexa.
+    - name: height
+      description: The requested height of the component.
+    - name: id
+      description: Reference name of the component, used for navigation and events.
+    - name: inheritParentState
+      description: When true, use the parent's state.
+    - name: maxHeight
+      description: The maximum allowed height of this component.
+    - name: maxWidth
+      description: The maximum allowed width of this component.
+    - name: minHeight
+      description: The minimum allowed height of this component.
+    - name: minWidth
+      description: The minimum allowed width of this component.
+    - name: onMount
+      description: Command to execute when the component is first displayed.
+      minimumVersion: '1.1'
+    - name: onCursorEnter
+      description: Command(s) to execute when a cursor (mouse pointer) enters the component's active region.
+      minimumVersion: '1.2'
+    - name: onCursorExit
+      description: Command(s) to execute when a cursor (mouse pointer) exits the component's active region.
+      minimumVersion: '1.2'
+    - name: opacity
+      description: Opacity of this component and children.
+    - name: paddingBottom
+      description: Space to add to the bottom of this component.
+    - name: paddingLeft
+      description: Space to add to the left of this component.
+    - name: paddingRight
+      description: Space to add to the right of this component.
+    - name: paddingTop
+      description: Space to add to the top of this component.
+    - name: shadowColor
+      description: Shadow color
+      minimumVersion: '1.2'
+    - name: shadowHorizontalOffset
+      description: Horizontal offset of the shadow
+      minimumVersion: '1.2'
+    - name: shadowRadius
+      description: Shadow blur radius
+      minimumVersion: '1.2'
+    - name: shadowVerticalOffset
+      description: Vertical offset of the shadow
+      minimumVersion: '1.2'
+    - name: speech
+      description: Transformed speech information for audio playback
+    - name: style
+      description: Named style or styles to apply.
+    - name: transform
+      description: Array of transformations.
+    - name: type
+      description: The type of the component.
+    - name: when
+      description: If it evaluates to false, this component does not inflate.
+    - name: width
+      description: The requested width of this component.
+      

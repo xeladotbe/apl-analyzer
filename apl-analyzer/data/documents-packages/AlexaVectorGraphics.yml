@@ -1,0 +1,76 @@
+name: Alexa Vector Graphics
+minimumVersion: '1.1'
+belongsTo: Documents and Packages
+specification:
+  properties:
+    - name: description
+      description: Optional description of this vector graphic.
+    - name: height
+      description: The height of the graphic.
+    - name: item(s)
+      description: An array of drawing items. Each item is either a GROUP or a PATH
+    - name: parameters
+      description: An array of parameter values that can be set on the AVG object.
+    - name: scaleTypeHeight
+      description: How the viewport height changes as the height scales.
+    - name: scaleTypeWidth
+      description: How the viewport width changes as the width scales.
+    - name: type
+      description: The type of vector graphic.
+      values:
+        - value: AVG
+    - name: version
+      description: The current release version of the AVG standard.
+      values:
+        - value: 1.0
+    - name: viewportHeight
+      description: The height of the viewport.
+    - name: viewportWidth
+      description: The width of the viewport.
+    - name: width
+      description: The width of the graphic.
+  sections:
+    - name: Path Item
+      specification:
+        properties:
+        - name: type
+          description: Must be set to "path".
+          values:
+            - value: path
+        - name: fillOpacity
+          description: The opacity of the path fill.
+        - name: fill
+          description: The fill color.
+        - name: pathData
+          description: The path drawing data.
+        - name: strokeOpacity
+          description: The opacity of the path stroke.
+        - name: stroke
+          description: The color used to draw the stroke.
+        - name: strokeWidth
+          description: The width of the path stroke.
+    - name: Group Item
+      specification:
+        properties:
+          - name: type
+            description: Must be set to "group".
+            values:
+              - value: group
+          - name: opacity
+            description: The opacity of the group.
+          - name: rotation
+            description: Rotation angle of the group, in degrees.
+          - name: pivotX
+            description: X-coordinate of the rotation pivot point (viewport coordinates).
+          - name: pivotY
+            description: Y-coordinate of the rotation pivot point (viewport coordinates).
+          - name: scaleX
+            description: Scaling factor on the X-axis.
+          - name: scaleY
+            description: Scaling factor on the Y-axis.
+          - name: translateX
+            description: X-coordinate translation (viewport coordinates).
+          - name: translateY
+            description: Y-coordinate translation (viewport coordinates).
+          - name: item(s)
+            description: Array of child drawing items.

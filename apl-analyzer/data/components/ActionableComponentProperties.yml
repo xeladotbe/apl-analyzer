@@ -1,0 +1,14 @@
+name: Actionable Component Properties
+belongsTo: Components
+minimumVersion: '1.2'
+position: 0
+specification:
+  properties:
+    - name: onFocus
+      description: Command to execute when the component receives focus.
+    - name: onBlur
+      description: Command to execute when the component loses focus.
+    - name: handleKeyDown
+      description: Keyboard handler(s) to evaluate when the component receives a key down.
+    - name: handleKeyUp
+      description: Keyboard handler(s) to evaluate when the component receives a key up.
