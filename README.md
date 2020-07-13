@@ -13,3 +13,11 @@ https://developer.amazon.com/en-US/docs/alexa/hosted-skills/alexa-hosted-skills-
 ## Amendments
 
 You can extend or modify the APL Analyzer and generate the APL document yourself. All specifications are located in the folder "apl-analyzer", with the included build script you can generate a new APL document. All APL features are documented in YAML Format for better readability.
+
+## Good to know
+
+The skill by default points to the APL Analyzer document on my server. 
+https://www.alexandermartin.dev/apl-analyzer/document.json 
+
+However, you can always host your own APL Analyzer document if you want to.
+Look at the index.js in your code editor.
