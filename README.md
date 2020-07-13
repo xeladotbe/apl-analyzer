@@ -10,6 +10,6 @@ To install the APL Analyzer in your developer account, follow the steps as descr
 
 https://developer.amazon.com/en-US/docs/alexa/hosted-skills/alexa-hosted-skills-git-import.html#import
 
-## The APL Analyzer Document
+## Amendments
 
-You can extend the APL Analyzer and generate the APL document yourself. All specifications are located in the folder "apl-analyzer", with the included build script you can generate a new APL document. All APL features are documented in YAML Format for better readability.
+You can extend or modify the APL Analyzer and generate the APL document yourself. All specifications are located in the folder "apl-analyzer", with the included build script you can generate a new APL document. All APL features are documented in YAML Format for better readability.
